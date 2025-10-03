@@ -64,3 +64,33 @@ footer {
   padding: 20px;
   background: #161b22;
 }
+.logo {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: gold;
+  letter-spacing: -1px;
+  position: relative;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, gold, orange, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo::before {
+  content: "⚡";
+  position: absolute;
+  left: -1.2em;
+  color: gold;
+  animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0;
+  }
+}
